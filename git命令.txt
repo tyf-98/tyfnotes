@@ -1,0 +1,33 @@
+初始化：(绑定github账号）
+配置用户名：git config --global user.name "tyf-98"
+配置邮箱：git config --global user.email "791686874@qq.com"
+
+创建本地仓库：
+用linux的mkdir命令创建一个文件
+cd到文件内，初始化本地git：git init
+
+查看配置信息：git config --list
+
+
+初始化好了就可以开始创建文件提交了
+查看文件状态：git status
+把工作区文件提交到暂存区：git add 
+把工作区文件删除到暂存区：git rm
+把暂存区文件提交到仓库：git commit -m "文件描述"
+
+
+管理远程仓库：
+下载仓库代码（克隆）：git clone https://github.com/tyf-98/new-note1.git(仓库地址)
+添加到远程仓库：git push
+拉取代码：git pull
+push不上去遇到443问题时，需要添加代理服务：
+查看是否有代理：git config --global http.proxy；git config --global https.proxy
+取消代理：git config --global --unset http.proxy；git config --global --unset https.proxy
+添加代理：git config --global https.proxy 127.0.0.1:7897；git config --global http.proxy 127.0.0.1:7897
+
+搭建github pages网站：
+注：github pages仅支持静态网页，仓库里面只能是.html文件
+创建仓库为：仓库名称：tyf-98.github.io
+在仓库内添加一个index.html的文件
+即可以通过https://tyf-98.github.io/访问该html
+
